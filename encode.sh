@@ -10,6 +10,6 @@ else
     #We use cat here since it handles '-' properly for stdin
     cat "$1" \
         | "$MESSAGE_ENCODER" \
-        | ffmpeg -loglevel 16 -f s16le -ar 22050 -ac 1 -i - -af 'volume=-0.75' -f wav - -y \
+        | ffmpeg -loglevel 16 -f s16le -ar 22050 -ac 1 -i - -af 'volume=-0.75' -f wav - \
         | sox -V1 -t wav - -t wav "$2" speed 0.991
 fi

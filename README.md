@@ -19,13 +19,13 @@ B+, zero) should work.
 
 2. Install pifm from https://github.com/unknownloner/pifm
 
-3. `sudo apt install festival`
+3. `sudo apt install festival` to install text-to-speech
 
 4. Clone this directory to /root/pager on your pi
 
 5. Copy pagerradio.service to /etc/systemd/system/pagerradio.service
 
-6. `sudo systemctl enable pagerradio`
+6. `sudo systemctl enable pagerradio` to run automatically on boot
 
 7. Put your broadcast data in /home/pi/pager\_data.wav or modify `PAGER_FILE` in
    pager\_loop.sh to point to the right file

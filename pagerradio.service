@@ -1,0 +1,14 @@
+[Unit]
+Requires=network.target
+Description=Pager FM radio encoder for Raspberry Pi
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /root/pager/pager_loop.sh
+Restart=always
+RestartSec=30
+User=root
+WorkingDirectory=/root/pager
+
+[Install]
+WantedBy=multi-user.target

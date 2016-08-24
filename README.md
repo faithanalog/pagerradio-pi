@@ -15,22 +15,22 @@ B+, zero) should work.
 
 #Install & Usage
 
-1. Make sure your pi is running Raspbian Jessie
+1. Make sure your pi is running Raspbian Jessie.
 
-2. Install pifm from https://github.com/unknownloner/pifm
+2. Install pifm from https://github.com/unknownloner/pifm.
 
-3. `sudo apt install festival` to install text-to-speech
+3. `sudo apt install festival` to install text-to-speech.
 
-4. Clone this directory to /root/pager on your pi
+4. Clone this directory to /root/pager on your pi.
 
-5. Copy pagerradio.service to /etc/systemd/system/pagerradio.service
+5. Copy pagerradio.service to /etc/systemd/system/pagerradio.service.
 
-6. `sudo systemctl enable pagerradio` to run automatically on boot
+6. `sudo systemctl enable pagerradio` to run automatically on boot.
 
 7. Put your broadcast data in /home/pi/pager\_data.wav or modify `PAGER_FILE` in
-   pager\_loop.sh to point to the right file
+   pager\_loop.sh to point to the right file.
 
-8. Restart your pi
+8. Restart your pi.
 
 9. Your pi should now be broadcasting the contents of pager\_data.wav on loop,
    with the IP address of your pi broadcast in between.
@@ -38,7 +38,7 @@ B+, zero) should work.
 
 #Encoding messages
 
-See encode.sh for details
+See encode.sh for details.
 
 
 #Playing back recordings
@@ -50,7 +50,7 @@ leaves the pitch intact will not work! Additionally, audio will be broadcast
 with the amplitude inverted.
 
 Here is an example command using ffmpeg and sox to convert an audio file so that
-it can be broadcast properly. This is the same method used by encode.sh
+it can be broadcast properly. This is the same method used by encode.sh.
 
     ffmpeg -i <input> -af 'volume=-0.75' -f wav - \
         | sox -t wav - <output> speed 0.991

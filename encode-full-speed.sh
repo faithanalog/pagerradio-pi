@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# This script is useful for generating output slowed at a rate of 0.991 
-# which is handy for use with pifm.
-
-# https://github.com/faithanalog/pifm
+# This script is useful for generating output at full speed when using the 
+# output WAV as audio, say to a "real" FM transmitter such as:
+# https://www.amazon.com/gp/product/B018QN4INM/
 
 # https://github.com/faithanalog/pagerenc
 MESSAGE_ENCODER=pagerenc
@@ -16,5 +15,5 @@ else
     cat "$1" \
         | "$MESSAGE_ENCODER" \
         | ffmpeg -loglevel 16 -f s16le -ar 22050 -ac 1 -i - -af 'volume=-0.75' -f wav - \
-        | sox -V1 -t wav - -t wav "$2" speed 0.991
+        | sox -V1 -t wav - -t wav "$2"
 fi

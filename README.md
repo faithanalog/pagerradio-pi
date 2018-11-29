@@ -17,7 +17,7 @@ B+, zero) should work.
 
 1. Make sure your pi is running Raspbian Jessie.
 
-2. Install pifm from https://github.com/unknownloner/pifm.
+2. Install pifm from https://github.com/faithanalog/pifm.
 
 3. `sudo apt install festival` to install text-to-speech.
 
@@ -54,3 +54,5 @@ it can be broadcast properly. This is the same method used by encode.sh.
 
     ffmpeg -i <input> -af 'volume=-0.75' -f wav - \
         | sox -t wav - <output> speed 0.991
+
+Alternatively, if you wanted to transmit the resulting encoded WAV with a "real" FM transmitter (such as those used to connect audio devices to in-dash car stereop units) the speed does not need to be slowed down.  Using encode-full-speed.sh will output a non-speed corrected WAV file for use in these situations. 

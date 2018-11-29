@@ -1,4 +1,4 @@
-#pagerradio-pi
+# pagerradio-pi
 
 Broadcasts pager messages over normal radio frequencies, much like a short-range
 radio which you'd plug into your phone for use in a car. Also broadcasts the IP
@@ -6,14 +6,14 @@ address of your pi to make it easier to access if it's headless and using a
 dynamic IP.
 
 
-#! Important ! Will not work on a pi3!
+# ! Important ! Will not work on a pi3!
 
 pifm, and by extension this project, will not work on a raspberry pi 3. It is
 unknown if it will work on a pi2, but any other raspberry pi derivative (A, B,
 B+, zero) should work.
 
 
-#Install & Usage
+# Install & Usage
 
 1. Make sure your pi is running Raspbian Jessie.
 
@@ -36,12 +36,12 @@ B+, zero) should work.
    with the IP address of your pi broadcast in between.
 
 
-#Encoding messages
+# Encoding messages
 
 See encode.sh for details.
 
 
-#Playing back recordings
+# Playing back recordings
 
 pifm plays back audio slightly faster than the input wave file. To play back
 recorded data, you must first slow it down to a speed of 0.991. This must be

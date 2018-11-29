@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script is useful for generating output st full speed when using the 
+# This script is useful for generating output at full speed when using the 
 # output WAV as audio, say to a "real" FM transmitter such as:
 # https://www.amazon.com/gp/product/B018QN4INM/
 
